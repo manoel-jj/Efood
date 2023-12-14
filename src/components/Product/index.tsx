@@ -1,15 +1,27 @@
 import Avaliacao from '../Avaliacao'
-import { Card } from './styles'
+import Tag from '../Tag'
+import { Card, Infos, Titulo, Image } from './styles'
 
-export const Product = () => (
+type Props = {
+  title: string
+  description: string
+  image: string
+  nota: string
+  infos: string
+  destaque: string
+}
+
+export const Product = ({ title, description, infos, image, nota, destaque }: Props) => (
   <Card>
-    <img src="//placehold.it/472x217" />
-    <h2>titulo</h2>
-    <Avaliacao />
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quam molestiae et optio quod, totam sapiente odio
-      maxime voluptas modi corrupti laudantium unde aliquam quo ad vitae ipsa tempora dicta.
-    </p>
+    <Image src={image} />
+    <Titulo>{title}</Titulo>
+    <Avaliacao valorNota={nota} />
+    <Infos>
+      <Tag texto={infos}></Tag>
+      <Tag texto={destaque}></Tag>
+    </Infos>
+
+    <p>{description}</p>
     <button>botao</button>
   </Card>
 )

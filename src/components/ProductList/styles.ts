@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   padding-top: 80px;
+  margin-left: 171px;
+  margin-right: 171px;
 `
 export const List = styled.ul`
   display: grid;
