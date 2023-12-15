@@ -8,12 +8,20 @@ export const Card = styled.div`
   margin-bottom: 48px;
 `
 export const Titulo = styled.h2`
+  display: inline-block;
+  margin-top: 8px;
+  margin-left: 7px;
   font-weight: 700;
   font-size: 18px;
-  display: inline-block;
 `
 
-export const Descricao = styled.h2`
+export const ContainerTitulo = styled.div`
+  display: flex;
+  justify-content: space-between;
+`
+
+export const Descricao = styled.p`
+  margin: 16px 8px 20px 8px;
   font-weight: 400;
   font-size: 14px;
 `
@@ -25,4 +33,12 @@ export const Infos = styled.div`
 
 export const Image = styled.img`
   width: 100%;
+`
+export const Button = styled.button`
+  padding: 4px 6px;
+  background-color: ${cores.rose};
+  color: ${cores.branca};
+  margin-bottom: 8px;
+  margin-left: 8px;
+  border: none;
 `

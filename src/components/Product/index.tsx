@@ -1,6 +1,6 @@
 import Avaliacao from '../Avaliacao'
 import Tag from '../Tag'
-import { Card, Infos, Titulo, Image } from './styles'
+import { Card, Infos, Titulo, Image, ContainerTitulo, Descricao, Button } from './styles'
 
 type Props = {
   title: string
@@ -14,15 +14,17 @@ type Props = {
 export const Product = ({ title, description, infos, image, nota, destaque }: Props) => (
   <Card>
     <Image src={image} />
-    <Titulo>{title}</Titulo>
-    <Avaliacao valorNota={nota} />
+    <ContainerTitulo>
+      <Titulo>{title}</Titulo>
+      <Avaliacao valorNota={nota} />
+    </ContainerTitulo>
     <Infos>
       <Tag texto={infos}></Tag>
       <Tag texto={destaque}></Tag>
     </Infos>
 
-    <p>{description}</p>
-    <button>botao</button>
+    <Descricao>{description}</Descricao>
+    <Button>botao</Button>
   </Card>
 )
 

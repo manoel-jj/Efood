@@ -1,5 +1,5 @@
 import { ButtonLink } from './styles'
 
-const Button = () => <ButtonLink to={'./'}>Saiba mais</ButtonLink>
+const ButtonTeste = () => <ButtonLink to={'#'}>Saiba mais</ButtonLink>
 
-export default Button
+export default ButtonTeste

@@ -1,4 +1,4 @@
-import { Nota, Image } from './styles'
+import { Nota, Image, ContainerNota } from './styles'
 
 import estrela from '../../assets/images/estrela.svg'
 
@@ -7,9 +7,9 @@ type Props = {
 }
 
 const Avaliacao = ({ valorNota }: Props) => (
-  <Nota>
-    {valorNota}
+  <ContainerNota>
+    <Nota>{valorNota}</Nota>
     <Image src={estrela} alt="estrela" />
-  </Nota>
+  </ContainerNota>
 )
 export default Avaliacao
