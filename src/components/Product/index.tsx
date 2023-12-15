@@ -8,7 +8,7 @@ type Props = {
   image: string
   nota: string
   infos: string
-  destaque: string
+  destaque?: string
 }
 
 export const Product = ({ title, description, infos, image, nota, destaque }: Props) => (
@@ -19,12 +19,12 @@ export const Product = ({ title, description, infos, image, nota, destaque }: Pr
       <Avaliacao valorNota={nota} />
     </ContainerTitulo>
     <Infos>
+      <Tag texto={destaque || ''}></Tag>
       <Tag texto={infos}></Tag>
-      <Tag texto={destaque}></Tag>
     </Infos>
 
     <Descricao>{description}</Descricao>
-    <Button>botao</Button>
+    <Button>Saiba mais</Button>
   </Card>
 )
 
