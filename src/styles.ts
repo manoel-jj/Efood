@@ -19,12 +19,9 @@ export const GlobalCss = createGlobalStyle`
 body {
   background-color: ${cores.branca};
   color: ${cores.rose};
-  padding-top: 24px;
 }
 
 .container {
-
-max-width: 1366px;
 width: 100%;
 margin: 0 auto;
 overflow-x: hidden;

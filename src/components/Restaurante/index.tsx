@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Avaliacao from '../Avaliacao'
 import Tag from '../Tag'
 import { Card, Infos, Titulo, Image, ContainerTitulo, Descricao, Button } from './styles'
@@ -11,7 +12,7 @@ type Props = {
   destaque?: string
 }
 
-export const Product = ({ title, description, infos, image, nota, destaque }: Props) => (
+export const Restaurante = ({ title, description, infos, image, nota, destaque }: Props) => (
   <Card>
     <Image src={image} />
     <ContainerTitulo>
@@ -19,13 +20,15 @@ export const Product = ({ title, description, infos, image, nota, destaque }: Pr
       <Avaliacao valorNota={nota} />
     </ContainerTitulo>
     <Infos>
-      <Tag texto={destaque || ''}></Tag>
+      {destaque && <Tag texto={destaque}></Tag>}
       <Tag texto={infos}></Tag>
     </Infos>
 
     <Descricao>{description}</Descricao>
-    <Button>Saiba mais</Button>
+    <Link to="/Cardapio">
+      <Button>Saiba mais</Button>
+    </Link>
   </Card>
 )
 
-export default Product
+export default Restaurante

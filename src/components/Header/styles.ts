@@ -3,9 +3,6 @@ import styled from 'styled-components'
 export const Imagem = styled.div`
   width: 100%;
   height: 384px;
-  align-items: center;
-  background-size: cover;
-  font-weight: bold;
 `
 
 export const HeaderSection = styled.div`
