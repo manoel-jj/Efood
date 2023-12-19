@@ -13,6 +13,7 @@ export const GlobalCss = createGlobalStyle`
   font-family: sans-serif;
   text-decoration: none;
   list-style: none;
+  font-family: 'Roboto', sans-serif;
 
 }
 
@@ -26,6 +27,9 @@ width: 100%;
 margin: 0 auto;
 overflow-x: hidden;
 
+}
 
+.ContainerBotao {
+  padding: 8px;
 }
 `
