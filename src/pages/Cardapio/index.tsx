@@ -3,6 +3,7 @@ import Pratos from '../../models/Pratos'
 import Pizza from '../../assets/images/pizza.png'
 import CardapioList from '../../components/CardapioList'
 import { HeaderCardapio } from '../../components/HeaderCardapio'
+import Footer from '../../components/Footer'
 
 const cardCardapio: Pratos[] = [
   {
@@ -59,6 +60,7 @@ const Cardapio = () => (
   <>
     <HeaderCardapio />
     <CardapioList pratos={cardCardapio} />
+    <Footer />
   </>
 )
 
