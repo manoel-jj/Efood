@@ -1,4 +1,11 @@
-import { Imagem, HeaderSection, ImgMacarrao, RestaurantesLink, Carrinho, HeaderContainer } from './styles'
+import {
+  Imagem,
+  HeaderSection,
+  ImgMacarrao,
+  RestaurantesLink,
+  Carrinho,
+  HeaderContainer
+} from './styles'
 
 import fundoHeader from '../../assets/images/Vector.svg'
 import logo from '../../assets/images/logo.svg'

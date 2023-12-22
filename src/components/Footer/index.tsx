@@ -1,4 +1,10 @@
-import { Copy, FooterContaine, LogoFooter, SocialIcon, Socialcontainer } from './styles'
+import {
+  Copy,
+  FooterContaine,
+  LogoFooter,
+  SocialIcon,
+  Socialcontainer
+} from './styles'
 
 import logo from '../../assets/images/logo.svg'
 import Facebook from '../../assets/images/facebook-round-svgrepo-com 1.svg'
@@ -14,8 +20,9 @@ const Footer = () => (
       <SocialIcon src={Insta} alt="" />
     </Socialcontainer>
     <Copy>
-      A efood é uma plataforma para divulgação de estabelecimentos, a responsabilidade pela entrega, qualidade dos
-      produtos é toda do estabelecimento contratado.{' '}
+      A efood é uma plataforma para divulgação de estabelecimentos, a
+      responsabilidade pela entrega, qualidade dos produtos é toda do
+      estabelecimento contratado.{' '}
     </Copy>
   </FooterContaine>
 )

@@ -11,7 +11,12 @@ const CardapioList = ({ pratos }: Props) => (
   <Container>
     <List>
       {pratos.map((pratos) => (
-        <Cardapio key={pratos.id} title={pratos.title} image={pratos.image} description={pratos.description} />
+        <Cardapio
+          key={pratos.id}
+          title={pratos.title}
+          image={pratos.image}
+          description={pratos.description}
+        />
       ))}
     </List>
   </Container>

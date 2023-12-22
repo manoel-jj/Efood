@@ -1,7 +1,15 @@
 import { Link } from 'react-router-dom'
 import Avaliacao from '../Avaliacao'
 import Tag from '../Tag'
-import { Card, Infos, Titulo, Image, ContainerTitulo, Descricao, Button } from './styles'
+import {
+  Card,
+  Infos,
+  Titulo,
+  Image,
+  ContainerTitulo,
+  Descricao,
+  Button
+} from './styles'
 
 type Props = {
   title: string
@@ -12,7 +20,14 @@ type Props = {
   destaque?: string
 }
 
-export const Restaurante = ({ title, description, infos, image, nota, destaque }: Props) => (
+export const Restaurante = ({
+  title,
+  description,
+  infos,
+  image,
+  nota,
+  destaque
+}: Props) => (
   <Card>
     <Image src={image} />
     <ContainerTitulo>
