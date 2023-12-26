@@ -15,7 +15,7 @@ export const GlobalCss = createGlobalStyle`
   text-decoration: none;
   list-style: none;
   font-family: 'Roboto', sans-serif;
-  background-color: black;
+
 }
 
 
