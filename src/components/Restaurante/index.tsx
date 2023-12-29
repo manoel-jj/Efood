@@ -8,7 +8,8 @@ import {
   Image,
   ContainerTitulo,
   Descricao,
-  Button
+  Button,
+  Destaque
 } from './styles'
 
 type Props = {
@@ -34,8 +35,8 @@ export const Restaurante = ({
       <Titulo>{title}</Titulo>
       <Avaliacao valorNota={nota} />
     </ContainerTitulo>
+    <Destaque>{destaque && <Tag texto={destaque}></Tag>}</Destaque>
     <Infos>
-      {destaque && <Tag texto={destaque}></Tag>}
       <Tag texto={infos}></Tag>
     </Infos>
 

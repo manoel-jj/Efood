@@ -29,12 +29,24 @@ export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
+  display: flex;
+  align-items: center;
+`
+
+export const Destaque = styled.div`
+  position: absolute;
+  top: 16px;
+  right: 81px;
+  display: flex;
+  align-items: center;
 `
 
 export const Image = styled.img`
   width: 100%;
 `
 export const Button = styled.button`
+  font-weight: 700;
+  font-size: 14px;
   padding: 4px 6px;
   background-color: ${cores.rose};
   color: ${cores.branca};

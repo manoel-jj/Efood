@@ -8,7 +8,7 @@ export const Container = styled.div`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 40px;
+  column-gap: 32px;
 `
 
 export const Title = styled.h2`

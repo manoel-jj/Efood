@@ -8,6 +8,7 @@ export const FooterContaine = styled.footer`
   text-align: center;
   background-color: ${cores.bege};
   padding: 40px;
+  margin-top: 120px;
 `
 export const Socialcontainer = styled.div`
   display: flex;
@@ -20,6 +21,8 @@ export const SocialIcon = styled.img`
 `
 export const Copy = styled.p`
   font-size: 10px;
+  width: 480px;
+  font-weight: 400;
 `
 export const LogoFooter = styled.img`
   width: 125px;

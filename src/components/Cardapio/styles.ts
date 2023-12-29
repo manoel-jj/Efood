@@ -25,10 +25,11 @@ export const Image = styled.img`
 `
 export const Botao = styled.button`
   width: 100%;
-  background-color: ${cores.branca};
+  background-color: #ffebd9;
   color: ${cores.rose};
   border: none;
   font-size: 14px;
   font-weight: 700;
   padding: 4px 84.76px 4px 83.24px;
+  white-space: nowrap;
 `

@@ -26,6 +26,8 @@ export const HeaderSection = styled.div`
 export const RestaurantesLink = styled.div`
   padding-top: 82px;
   margin-left: 171px;
+  font-size: 18px;
+  font-weight: 900;
   a {
     color: ${cores.rose};
   }
@@ -35,6 +37,11 @@ export const Carrinho = styled.div`
   padding-top: 82px;
   margin-right: 171px;
   color: ${cores.rose};
+
+  span {
+    font-size: 18px;
+    font-weight: 900;
+  }
 `
 
 export const ImgMacarrao = styled.div`
