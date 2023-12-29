@@ -3,7 +3,7 @@ import { cores } from '../../styles'
 
 export const Card = styled.div`
   border: 1px solid ${cores.rose};
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   background-color: ${cores.rose};
   color: ${cores.branca};
 `
