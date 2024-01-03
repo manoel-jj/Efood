@@ -7,14 +7,16 @@ type Props = {
 }
 
 export const Cardapio = ({ title, description, image }: Props) => (
-  <Card>
-    <Image src={image} />
-    <Titulo>{title}</Titulo>
-    <Descricao>{description}</Descricao>
-    <div className="ContainerBotao">
-      <Botao>Adicionar ao carrinho</Botao>
-    </div>
-  </Card>
+  <>
+    <Card>
+      <Image src={image} />
+      <Titulo>{title}</Titulo>
+      <Descricao>{description}</Descricao>
+      <div className="ContainerBotao">
+        <Botao>Adicionar ao carrinho</Botao>
+      </div>
+    </Card>
+  </>
 )
 
 export default Cardapio
