@@ -21,7 +21,7 @@ export const Modal = styled.div`
   position: absolute;
   top: 490px;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 
   .overlay {
     position: fixed;
@@ -62,18 +62,20 @@ export const ModalContent = styled.div`
 
   p {
     width: 656px;
-    height: 176px;
     font-weight: 400;
     font-size: 14px;
     margin-right: 32px;
     margin-top: 16px;
+    margin-bottom: 16px;
   }
 `
-// .overlay {
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(0, 0, 0, 0.8);
-// }
+export const Botao = styled.button`
+  font-size: 14px;
+  font-weight: 700;
+  width: 218px;
+  height: 24px;
+  padding: 4px 7px 4px 7px;
+  color: ${cores.rose};
+  background-color: ${cores.branca};
+  border: none;
+`

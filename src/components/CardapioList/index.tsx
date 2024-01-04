@@ -1,4 +1,4 @@
-import { Container, List, Modal, ModalContent } from './styles'
+import { Container, List, Modal, ModalContent, Botao } from './styles'
 
 import Pratos from '../../models/Pratos'
 import Cardapio from '../Cardapio'
@@ -49,7 +49,7 @@ const CardapioList = ({ pratos }: Props) => (
             <br />
             Serve: de 2 a 3 pessoas
           </p>
-          <button>Adicionar ao carrinho - R$ 60,90</button>
+          <Botao>Adicionar ao carrinho - R$ 60,90 </Botao>
         </div>
       </ModalContent>
       <div className="overlay"></div>
