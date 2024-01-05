@@ -22,6 +22,11 @@ export const Modal = styled.div`
   top: 490px;
   width: 100%;
   z-index: 2;
+  display: none;
+
+  &.visivel {
+    display: flex;
+  }
 
   .overlay {
     position: fixed;

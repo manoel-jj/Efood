@@ -6,6 +6,7 @@ export const Card = styled.div`
   position: relative;
   border: 1px solid ${cores.rose};
   margin-bottom: 48px;
+  width: 472px;
 `
 export const Titulo = styled.h2`
   display: inline-block;
@@ -21,6 +22,7 @@ export const ContainerTitulo = styled.div`
 `
 
 export const Descricao = styled.p`
+  height: 88px;
   margin: 16px 8px 20px 8px;
   font-weight: 400;
   font-size: 14px;
@@ -42,7 +44,9 @@ export const Destaque = styled.div`
 `
 
 export const Image = styled.img`
-  width: 100%;
+  width: 472px;
+  height: 217px;
+  object-fit: fill;
 `
 export const Button = styled.button`
   font-weight: 700;
