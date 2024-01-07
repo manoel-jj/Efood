@@ -1,67 +1,35 @@
-import Pratos from '../../models/Pratos'
-
-import Pizza from '../../assets/images/pizza.png'
+import { useEffect, useState } from 'react'
 import CardapioList from '../../components/CardapioList'
 import { HeaderCardapio } from '../../components/HeaderCardapio'
 import Footer from '../../components/Footer'
 
-const cardCardapio: Pratos[] = [
-  {
-    id: 1,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
+export type IfoodCardapio = {
+  id: number
+  foto: string
+  nome: string
+  descricao: string
+  porcao: string
+  preco: string
+}
 
-    image: Pizza
-  },
-  {
-    id: 2,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
+const Cardapio = () => {
+  const [cardapio, setCardapio] = useState<IfoodCardapio[]>([])
 
-    image: Pizza
-  },
-  {
-    id: 3,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
+  useEffect(() => {
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+      .then((res) => res.json())
+      .then((res) => {
+        setCardapio(res as IfoodCardapio[])
+      })
+  }, [])
 
-    image: Pizza
-  },
-  {
-    id: 4,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-
-    image: Pizza
-  },
-  {
-    id: 5,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-
-    image: Pizza
-  },
-  {
-    id: 6,
-    description:
-      'A clássica Marguerita: molho de tomate suculento, mussarela derretida, manjericão fresco e um toque de azeite. Sabor e simplicidade!',
-    title: 'Pizza Marguerita',
-
-    image: Pizza
-  }
-]
-
-const Cardapio = () => (
-  <>
-    <HeaderCardapio />
-    <CardapioList pratos={cardCardapio} />
-    <Footer />
-  </>
-)
+  return (
+    <div>
+      <HeaderCardapio />
+      <CardapioList ifood={cardapio} />
+      <Footer />
+    </div>
+  )
+}
 
 export default Cardapio

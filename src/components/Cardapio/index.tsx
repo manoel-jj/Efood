@@ -4,14 +4,24 @@ type Props = {
   title: string
   description: string
   image: string
+  valor: string
+  serve: string
 }
 
-export const Cardapio = ({ title, description, image }: Props) => (
+export const Cardapio = ({
+  title,
+  description,
+  image,
+  valor,
+  serve
+}: Props) => (
   <>
     <Card>
       <Image src={image} />
       <Titulo>{title}</Titulo>
       <Descricao>{description}</Descricao>
+      <div>{valor}</div>
+      <div>{serve}</div>
       <div className="ContainerBotao">
         <Botao>Adicionar ao carrinho</Botao>
       </div>
