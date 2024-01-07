@@ -2,7 +2,6 @@ import RestauranteList from '../../components/RestauranteList'
 import { Header } from '../../components/Header'
 import Footer from '../../components/Footer'
 import { useEffect, useState } from 'react'
-
 export type IfoodRestaurante = {
   id: number
   titulo: string
@@ -11,6 +10,16 @@ export type IfoodRestaurante = {
   avaliacao: string
   descricao: string
   capa: string
+  cardapio: [
+    {
+      foto: string
+      preco: string
+      id: number
+      nome: string
+      descricao: string
+      porcao: string
+    }
+  ]
 }
 
 const Home = () => {

@@ -1,22 +1,24 @@
 import { Container, List } from './styles'
-import { IfoodCardapio } from '../../pages/Cardapio'
 
 type Props = {
-  ifood: IfoodCardapio[]
+  restaurantes: Restaurant[]
 }
 
-const CardapioList = ({ ifood }: Props) => (
+const CardapioList = ({ restaurantes }: Props) => (
   <>
     <Container>
       <List>
-        {ifood.map((prato) => (
-          <div key={prato.id}>
-            <img src={prato.foto} alt={prato.nome} />
-            <h3>{prato.nome}</h3>
-            <p>{prato.descricao}</p>
-            <div>{prato.porcao}</div>
-            <div>{prato.preco}</div>
-            {/* esssas duas ultimas div coloquei pq na api pediu mas ainda n fiz a estilização */}
+        {restaurantes.map((restaurante) => (
+          <div key={restaurante.id}>
+            {restaurante.cardapio.map((itemCardapio) => (
+              <div key={itemCardapio.id}>
+                <img src={itemCardapio.foto} alt={itemCardapio.nome} />
+                <h3>{itemCardapio.nome}</h3>
+                <p>{itemCardapio.descricao}</p>
+                <div>{itemCardapio.porcao}</div>
+                <div>{itemCardapio.preco}</div>
+              </div>
+            ))}
           </div>
         ))}
       </List>

@@ -2,7 +2,7 @@ import { Container, List } from './styles'
 import Restaurante from '../Restaurante'
 import { IfoodRestaurante } from '../../pages/Home'
 
-export type Props = {
+type Props = {
   ifood: IfoodRestaurante[]
 }
 
