@@ -20,8 +20,8 @@ export const Cardapio = ({
       <Image src={image} />
       <Titulo>{title}</Titulo>
       <Descricao>{description}</Descricao>
-      <div>{valor}</div>
-      <div>{serve}</div>
+      <span>{valor}</span>
+      <span>{serve}</span>
       <div className="ContainerBotao">
         <Botao>Adicionar ao carrinho</Botao>
       </div>

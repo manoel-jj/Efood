@@ -1,4 +1,12 @@
-import { Container, List } from './styles'
+import {
+  Container,
+  List,
+  Titulo,
+  Card,
+  Descricao,
+  Button,
+  Item
+} from './styles'
 
 type Props = {
   restaurantes: Restaurant[]
@@ -9,17 +17,20 @@ const CardapioList = ({ restaurantes }: Props) => (
     <Container>
       <List>
         {restaurantes.map((restaurante) => (
-          <div key={restaurante.id}>
+          <Card key={restaurante.id}>
             {restaurante.cardapio.map((itemCardapio) => (
-              <div key={itemCardapio.id}>
+              <Item key={itemCardapio.id}>
                 <img src={itemCardapio.foto} alt={itemCardapio.nome} />
-                <h3>{itemCardapio.nome}</h3>
-                <p>{itemCardapio.descricao}</p>
-                <div>{itemCardapio.porcao}</div>
-                <div>{itemCardapio.preco}</div>
-              </div>
+                <div>
+                  <Titulo>{itemCardapio.nome}</Titulo>
+                  <Descricao>{itemCardapio.descricao}</Descricao>
+                  <span>{itemCardapio.porcao}</span>
+                  <span>{itemCardapio.preco}</span>
+                </div>
+                <Button>Adicionar ao carrinho</Button>
+              </Item>
             ))}
-          </div>
+          </Card>
         ))}
       </List>
     </Container>
