@@ -16,7 +16,7 @@ type Props = {
   title: string
   description: string
   image: string
-  nota: string
+  nota: number
   infos: string
   destaque?: string
 }
@@ -33,7 +33,7 @@ export const Restaurante = ({
     <Image src={image} />
     <ContainerTitulo>
       <Titulo>{title}</Titulo>
-      <Avaliacao valorNota={nota} />
+      <Avaliacao valorNota={nota.toString()} />
     </ContainerTitulo>
     <Destaque>{destaque && <Tag texto={destaque}></Tag>}</Destaque>
     <Infos>

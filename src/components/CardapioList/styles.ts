@@ -8,13 +8,14 @@ export const Container = styled.div`
 
 export const List = styled.ul`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   column-gap: 32px;
 `
 export const Card = styled.div`
   border: 1px solid ${cores.rose};
   margin-bottom: 32px;
   width: 320px;
+  height: 388px;
 
   img {
     width: 100%;

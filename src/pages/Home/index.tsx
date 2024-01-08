@@ -2,41 +2,22 @@ import RestauranteList from '../../components/RestauranteList'
 import { Header } from '../../components/Header'
 import Footer from '../../components/Footer'
 import { useEffect, useState } from 'react'
-export type IfoodRestaurante = {
-  id: number
-  titulo: string
-  destacado: boolean
-  tipo: string
-  avaliacao: string
-  descricao: string
-  capa: string
-  cardapio: [
-    {
-      foto: string
-      preco: string
-      id: number
-      nome: string
-      descricao: string
-      porcao: string
-    }
-  ]
-}
 
 const Home = () => {
-  const [restaurantes, setRestaurantes] = useState<IfoodRestaurante[]>([])
+  const [restaurantes, setRestaurantes] = useState<Restaurant[]>([])
 
   useEffect(() => {
     fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
       .then((res) => {
-        setRestaurantes(res as IfoodRestaurante[])
+        setRestaurantes(res as Restaurant[])
       })
   }, [])
 
   return (
     <div>
       <Header />
-      <RestauranteList ifood={restaurantes} />
+      <RestauranteList restaurantes={restaurantes} />
       <Footer />
     </div>
   )
