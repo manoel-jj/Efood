@@ -41,7 +41,7 @@ export const Restaurante = ({
     </Infos>
 
     <Descricao>{description}</Descricao>
-    <Link to="/Cardapio">
+    <Link to="/Cardapio/${id}">
       <Button>Saiba mais</Button>
     </Link>
   </Card>

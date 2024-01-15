@@ -6,19 +6,10 @@ declare type Restaurant = {
   avaliacao: number
   descricao: string
   capa: string
-  cardapio: [
-    {
-      id: number
-      foto: string
-      nome: string
-      descricao: string
-      porcao: string
-      preco: number
-    }
-  ]
+  cardapio: Item[]
 }
 
-declare type Menu = {
+declare type Item = {
   id: number
   foto: string
   nome: string
