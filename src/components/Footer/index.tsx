@@ -1,30 +1,37 @@
-import {
-  Copy,
-  FooterContaine,
-  LogoFooter,
-  SocialIcon,
-  Socialcontainer
-} from './styles'
-
 import logo from '../../assets/images/logo.svg'
-import Facebook from '../../assets/images/facebook-round-svgrepo-com 1.svg'
-import Tw from '../../assets/images/twitter-2-svgrepo-com 1.svg'
-import Insta from '../../assets/images/instagram-round-svgrepo-com (1) 1.svg'
+import facebook from '../../assets/images/facebook.png'
+import twitter from '../../assets/images/twitter.png'
+import instagram from '../../assets/images/instagram.svg'
+
+import * as S from './styles'
+import { Logo } from '../../styles'
 
 const Footer = () => (
-  <FooterContaine>
-    <LogoFooter src={logo} alt="" />
-    <Socialcontainer>
-      <SocialIcon src={Facebook} alt="" />
-      <SocialIcon src={Tw} alt="" />
-      <SocialIcon src={Insta} alt="" />
-    </Socialcontainer>
-    <Copy>
+  <S.FooterSection>
+    <Logo src={logo} alt="Logo Efood" />
+    <S.ListaLinksMedia>
+      <li>
+        <a title="Clique aqui para ir para o instagram" href="#">
+          <img src={instagram} />
+        </a>
+      </li>
+      <li>
+        <a title="Clique aqui para ir para o instagram" href="#">
+          <img src={facebook} />
+        </a>
+      </li>
+      <li>
+        <a title="Clique aqui para ir para o instagram" href="#">
+          <img src={twitter} />
+        </a>
+      </li>
+    </S.ListaLinksMedia>
+    <p>
       A efood é uma plataforma para divulgação de estabelecimentos, a
-      responsabilidade pela entrega, qualidade dos produtos é toda do
-      estabelecimento contratado.
-    </Copy>
-  </FooterContaine>
+      responsabilidade pela entrega, qualidade <br /> dos produtos é toda do
+      estabelecimento contratado.{' '}
+    </p>
+  </S.FooterSection>
 )
 
 export default Footer

@@ -1,21 +1,58 @@
 import styled from 'styled-components'
+import { breakpoints, colors } from '../../styles'
 
-export const Imagem = styled.div`
+export const HeaderBar = styled.header`
   width: 100%;
-  height: 366px;
-`
+  height: 186px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-weight: 900;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 
-export const HeaderSection = styled.div`
-  padding-top: 40px;
-  text-align: center;
-`
-export const ContainerH1 = styled.div`
-  width: 539px;
-  height: 84px;
-  margin: 138px auto 40px auto;
+  .container {
+    display: flex;
+    justify-content: space-between;
 
-  h1 {
-    font-size: 36px;
-    font-weight: 900;
+    a {
+      text-decoration: none;
+      color: ${colors.orange};
+    }
   }
+
+  span {
+    margin-right: 8px;
+  }
+
+  @media (max-width: ${breakpoints.tablet}) {
+    display: flex;
+  }
+
+  @media (max-width: ${breakpoints.phone}) {
+    display: flex;
+    height: 90px;
+    padding-left: 32px;
+
+    p {
+      display: none;
+    }
+  }
+`
+
+export const Logo = styled.div`
+  position: absolute;
+
+  @media (max-width: ${breakpoints.phone}) {
+    position: relative;
+    margin-right: 48px;
+    padding: 32px 0;
+  }
+`
+
+export const CartButton = styled.a`
+  text-decoration: none;
+  color: ${colors.orange};
+  display: flex;
+  cursor: pointer;
 `

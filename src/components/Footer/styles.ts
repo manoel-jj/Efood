@@ -1,32 +1,28 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const FooterContaine = styled.footer`
+export const FooterSection = styled.div`
+  height: 298px;
+  background-color: ${colors.lightPeach};
   display: flex;
+  text-align: center;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
-  text-align: center;
-  background-color: ${cores.bege};
-  padding: 40px;
   margin-top: 120px;
+
+  p {
+    font-size: 10px;
+    font-weight: 400;
+  }
 `
-export const Socialcontainer = styled.div`
+
+export const ListaLinksMedia = styled.ul`
   display: flex;
-  gap: 8px;
-  margin-bottom: 80px;
-`
-export const SocialIcon = styled.img`
-  width: 24px;
-  height: 24px;
-`
-export const Copy = styled.p`
-  font-size: 10px;
-  width: 480px;
-  font-weight: 400;
-`
-export const LogoFooter = styled.img`
-  width: 125px;
-  height: 57px;
-  display: block;
-  margin-bottom: 32px;
+  padding-bottom: 80px;
+  padding-top: 32px;
+
+  a {
+    margin-right: 8px;
+  }
 `

@@ -1,18 +1,40 @@
-import { Imagem, HeaderSection, ContainerH1 } from './styles'
+import { useDispatch, useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
-import fundoHeader from '../../assets/images/Vector.svg'
+import { RootReducer } from '../../store'
+import { open } from '../../store/reducers/cart'
+
+import vector from '../../assets/images/Vector.svg'
 import logo from '../../assets/images/logo.svg'
 
-export const Header = () => (
-  <Imagem style={{ backgroundImage: `url(${fundoHeader})` }}>
-    <HeaderSection>
-      <img src={logo} alt="logo efood" />
-      <ContainerH1>
-        <h1>
-          Viva experiências gastronômicas <br />
-          no conforto da sua casa
-        </h1>
-      </ContainerH1>
-    </HeaderSection>
-  </Imagem>
-)
+import * as S from './styles'
+
+const Header = () => {
+  const dispatch = useDispatch()
+  const { items } = useSelector((state: RootReducer) => state.cart)
+
+  const openCart = () => {
+    dispatch(open())
+  }
+
+  return (
+    <S.HeaderBar style={{ backgroundImage: `url(${vector})` }}>
+      <S.Logo>
+        <Link title="Clique aqui para voltar para a home" to="/">
+          <img src={logo} />
+        </Link>
+      </S.Logo>
+      <div className="container">
+        <a href="/">
+          <span>Restaurantes</span>
+        </a>
+
+        <S.CartButton onClick={openCart}>
+          <span>{items.length}</span>produto(s) no carrinho
+        </S.CartButton>
+      </div>
+    </S.HeaderBar>
+  )
+}
+
+export default Header
